@@ -1,1 +1,1 @@
-# Angular_training_2026
+# Angular Practice
