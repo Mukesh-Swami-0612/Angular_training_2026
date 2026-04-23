@@ -1,0 +1,12 @@
+<div class="card text-center p-3 bg-light text-primary">
+  <h2>Child Component</h2>
+
+  <h3 class="text-primary">
+    WELCOME, {{ userName | uppercase }}
+  </h3>
+
+  <button class="btn btn-success mt-2"
+          (click)="sendGreeting()">
+    Send Greeting
+  </button>
+</div>

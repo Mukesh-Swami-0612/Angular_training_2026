@@ -1,0 +1,19 @@
+<h1>Employee List</h1>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Name</th>
+    <th>DOJ</th>
+    <th>Salary</th>
+    <th>Profession</th>
+    <th>Description</th>
+  </tr>
+
+  <tr *ngFor="let p of persons" [ngClass]="getClass(p.profession)">
+    <td>{{ p.name }}</td>
+    <td>{{ p.doj }}</td>
+    <td>{{ p.salary }}</td>
+    <td>{{ p.profession }}</td>
+    <td>{{ getDescription(p.profession) }}</td>
+  </tr>
+</table>

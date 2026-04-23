@@ -1,0 +1,34 @@
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+/* Different styles */
+.dev {
+  background-color: #d1e7dd;
+}
+
+.manager {
+  background-color: #cff4fc;
+}
+
+.tester {
+  background-color: #fff3cd;
+}
+
+.hr {
+  background-color: #f8d7da;
+}
+
+/* Default case */
+.unknown {
+  color: red;
+  font-weight: bold;
+}

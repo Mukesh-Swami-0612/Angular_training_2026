@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="text-center bg-primary text-white">
+    Sharing Data Between Parent & Child
+  </h1>
+
+  <h2 class="bg-success text-white text-center">
+    Parent Component
+  </h2>
+
+  <label class="form-label">Enter Salary</label>
+  <input type="number"
+         class="form-control"
+         [(ngModel)]="salary">
+
+  <br />
+
+  <app-child
+    [salary]="salary"
+    (bonusEvent)="receiveBonus($event)">
+  </app-child>
+
+  <h3 class="text-center text-primary mt-3">
+    Bonus Received: {{ bonus }}
+  </h3>
+</div>

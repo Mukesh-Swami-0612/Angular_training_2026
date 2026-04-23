@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <h4 class="text-center text-white bg-primary p-2">Job Details</h4>
+
+  <div class="card mt-3" style="max-width: 500px; margin: 0 auto;">
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">
+        <strong>Title:</strong> {{ job?.title }}
+      </li>
+
+      <li class="list-group-item">
+        <strong>Company:</strong> {{ job?.company }}
+      </li>
+
+      <li class="list-group-item">
+        <strong>Experience:</strong> {{ job?.exp }}
+      </li>
+
+      <li class="list-group-item text-center">
+        <button class="btn btn-success me-2" (click)="saveJob()">
+          Save Job
+        </button>
+        <a class="btn btn-primary"
+           [routerLink]="['/apply', job?.id]">
+          Apply Now
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- <div class="text-center mt-3">
+    <a routerLink="/" class="btn btn-outline-secondary">Back to Jobs</a>
+  </div> -->
+</div>
