@@ -1,0 +1,6 @@
+@PassportApi_HostAddress = http://localhost:5113
+
+GET {{PassportApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

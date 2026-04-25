@@ -1,0 +1,54 @@
+<form #form="ngForm" autocomplete="off" (submit)="savePassport(form)">
+    <input type="hidden" name="Id" [value]="srv.passportData.id">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                <i class="bi bi-person-lines-fill"  [class.green-icon]="PPHolderName.valid"
+                 [class.red-icon]="PPHolderName.invalid && PPHolderName.touched"></i>
+                </div>
+            </div>
+            <input name="PPHolderName" #PPHolderName="ngModel" [(ngModel)]="srv.passportData.holderName"
+            placeholder="Passport Holder Name" class="form-control" required minlength="3" maxlength="50">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="bi bi-123" [class.green-icon]="PPNumber.valid"
+                    [class.red-icon]="PPNumber.invalid && PPNumber.touched"></i>
+                </div>
+            </div>
+            <input name="PPNumber" #PPNumber="ngModel" [(ngModel)]="srv.passportData.passportNumber"
+            placeholder="Passport Number" class="form-control" required minlength="10" maxlength="10">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="bi bi-award" [class.green-icon]="PPExpiry.valid"
+                    [class.red-icon]="PPExpiry.invalid && PPExpiry.touched"></i>
+                </div>
+            </div>
+            <input name="PPExpiry" #PPExpiry="ngModel" [(ngModel)]="srv.passportData.expiryDate"
+            placeholder="Passport Expiry (MM/YY)" class="form-control" required minlength="5" maxlength="5">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="bi bi-cash-stack" [class.green-icon]="PPOCode.valid"
+                    [class.red-icon]="PPOCode.invalid && PPOCode.touched"></i>
+                </div>
+            </div>
+            <input name="PPOCode" #PPOCode="ngModel" [(ngModel)]="srv.passportData.ppoCode"
+            placeholder="Passport Office Code" class="form-control" required minlength="6" maxlength="6">
+        </div>
+    </div>
+    <button class="btn btn-lg bg-warning" type="submit" [disabled]="form.invalid">
+        <i class="bi bi-database-fill-up green-icon"></i> Create/Update Passport
+    </button>
+</form>

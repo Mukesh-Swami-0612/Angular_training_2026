@@ -1,0 +1,39 @@
+<table class="table table-hover table-success table-bordered">
+  <thead>
+    <tr>
+      <td>Passport Id</td>
+      <td>Passport Name</td>
+      <td>Passport Expiry</td>
+      <td>PPO Code</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of srv.passportList">
+      <td>{{ p.id }}</td>
+      <td>{{ p.holderName }}</td>
+      <td>{{ p.expiryDate }}</td>
+      <td>{{ p.ppoCode }}</td>
+
+      <!-- Edit Button -->
+      <td>
+        <i 
+          class="bi bi-pencil-square" 
+          style="cursor: pointer;"
+          (click)="fillForm(p)">
+        </i>
+      </td>
+
+      <!-- Delete Button -->
+      <td>
+        <i 
+          class="bi bi-trash" 
+          style="cursor: pointer;"
+          (click)="onDelete(p.id)">
+        </i>
+      </td>
+    </tr>
+  </tbody>
+</table>
